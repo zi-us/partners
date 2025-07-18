@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Program | Zi-US - Advanced Enterprise Solutions</title>
+    <meta name="description" content="Join the Zi-US Partner Program and grow your business with cutting-edge development tools and resources">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap');
+        
+        :root {
+            --primary: #000000;
+            --secondary: #1a1a1a;
+            --accent: #0066ff;
+            --danger: #ff3366;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Calibri Light', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--primary);
+            background: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container and Grid */
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation (Same as index) */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            padding: 1.2rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-menu a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            position: relative;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.6;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .btn-icon {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Hero Section */
+        .partner-hero {
+            margin-top: 5rem;
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--gray-100) 0%, white 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4.2rem;
+            font-weight: 200;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content .accent {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+        }
+
+        /* Partner Benefits */
+        .benefits {
+            padding: 8rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.2rem;
+            font-weight: 200;
+            margin-bottom: 1.6rem;
+        }
+
+        .section-header p {
+            font-size: 1.4rem;
+            color: var(--gray-600);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover::before {
+            transform: translateY(0);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            background: white;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+            font-size: 2.4rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* Partner Tiers */
+        .partner-tiers {
+            padding: 8rem 0;
+            background: var(--gray-100);
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .tier-card {
+            background: white;
+            border: 1px solid var(--gray-300);
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .tier-card.featured {
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(0, 102, 255, 0.1);
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: -1.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.4rem 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .tier-card h3 {
+            font-size: 2.4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .tier-price {
+            font-size: 3.2rem;
+            font-weight: 200;
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-price span {
+            font-size: 1.4rem;
+            color: var(--gray-600);
+        }
+
+        .tier-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .tier-features li {
+            padding: 0.8rem 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            padding: 8rem 0;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-top: 6rem;
+        }
+
+        .story-card {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 3rem;
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .story-logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .story-content h4 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+        }
+
+        .story-content p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .story-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            font-size: 1.1rem;
+        }
+
+        .stat-value {
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        /* Application Form */
+        .application {
+            padding: 8rem 0;
+            background: var(--gray-100);
+        }
+
+        .application-content {
+            max-width: 60rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .application-form {
+            background: white;
+            padding: 4rem;
+            margin-top: 4rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 1.2rem 1.6rem;
+            font-size: 1.2rem;
+            font-family: inherit;
+            border: 1px solid var(--gray-300);
+            background: white;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-textarea {
+            min-height: 10rem;
+            resize: vertical;
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 8rem 0;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .resource-card {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .resource-icon {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-card h4 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+        }
+
+        .resource-card p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+        }
+
+        /* Footer (Same as index) */
+        footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-column h5 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-copyright {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        .social-link {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gray-300);
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            background: var(--primary);
+        }
+
+        .social-link:hover svg {
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .benefits-grid,
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 55%;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-card {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="brand-name">Zi-US</a>
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="index.html#integration">Integration</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#workflow">Workflow</a></li>
+                        <li><a href="index.html#docs">Documentation</a></li>
+                        <li><a href="index.html#enterprise">Enterprise</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn" target="_blank">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="login.html" class="btn btn-primary" target="_blank">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+                        </svg>
+                        Deploy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="partner-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Grow your business with <span class="accent">Zi-US</span></h1>
+                <p>Join our partner ecosystem and help organizations build, deploy, and scale modern applications with confidence.</p>
+                <div class="hero-buttons">
+                    <a href="#apply" class="btn btn-primary">Become a Partner</a>
+                    <a href="#benefits" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Benefits -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Partner with Zi-US?</h2>
+                <p>Access exclusive resources, tools, and support to accelerate your growth</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Revenue Sharing</h3>
+                    <p>Earn competitive commissions on referrals and implementations with transparent revenue sharing models.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Training & Certification</h3>
+                    <p>Access comprehensive training programs and earn certifications to showcase your expertise.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Technical Support</h3>
+                    <p>Get priority access to our engineering team and dedicated partner support resources.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Co-Marketing</h3>
+                    <p>Leverage joint marketing opportunities, case studies, and co-branded campaigns.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Early Access</h3>
+                    <p>Get early access to new features, beta programs, and product roadmap insights.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Partner Network</h3>
+                    <p>Connect with other partners and customers through exclusive events and forums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Tiers -->
+    <section class="partner-tiers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Tiers</h2>
+                <p>Choose the partnership level that best fits your business needs</p>
+            </div>
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <h3>Silver</h3>
+                    <div class="tier-price">15%<span> / commission</span></div>
+                    <p class="tier-subtitle">For growing agencies</p>
+                    <ul class="tier-features">
+                        <li>Partner portal access</li>
+                        <li>Basic training materials</li>
+                        <li>Marketing resources</li>
+                        <li>Email support</li>
+                        <li>Quarterly business reviews</li>
+                    </ul>
+                    <a href="#apply" class="btn">Apply Now</a>
+                </div>
+                <div class="tier-card featured">
+                    <div class="tier-badge">Most Popular</div>
+                    <h3>Gold</h3>
+                    <div class="tier-price">20%<span> / commission</span></div>
+                    <p class="tier-subtitle">For established partners</p>
+                    <ul class="tier-features">
+                        <li>Everything in Silver, plus:</li>
+                        <li>Priority support</li>
+                        <li>Advanced certifications</li>
+                        <li>Co-marketing opportunities</li>
+                        <li>Dedicated account manager</li>
+                        <li>Beta program access</li>
+                    </ul>
+                    <a href="#apply" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="tier-card">
+                    <h3>Platinum</h3>
+                    <div class="tier-price">25%<span> / commission</span></div>
+                    <p class="tier-subtitle">For strategic partners</p>
+                    <ul class="tier-features">
+                        <li>Everything in Gold, plus:</li>
+                        <li>Custom integration support</li>
+                        <li>Executive sponsorship</li>
+                        <li>Joint go-to-market</li>
+                        <li>Strategic planning sessions</li>
+                        <li>White-label options</li>
+                    </ul>
+                    <a href="#apply" class="btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Success Stories</h2>
+                <p>See how our partners are driving growth and innovation</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-logo">TC</div>
+                    <div class="story-content">
+                        <h4>TechCraft Solutions</h4>
+                        <p>"Partnering with Zi-US transformed our agency. We've increased our project delivery speed by 40% and expanded our client base significantly."</p>
+                        <div class="story-stats">
+                            <span class="stat-item"><span class="stat-value">150+</span> projects deployed</span>
+                            <span class="stat-item"><span class="stat-value">$2.5M</span> revenue generated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-logo">DI</div>
+                    <div class="story-content">
+                        <h4>Digital Innovators</h4>
+                        <p>"The technical support and resources from Zi-US have been game-changing. Our team is now certified and delivering enterprise-grade solutions."</p>
+                        <div class="story-stats">
+                            <span class="stat-item"><span class="stat-value">85%</span> client retention</span>
+                            <span class="stat-item"><span class="stat-value">3x</span> growth in 18 months</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-logo">CS</div>
+                    <div class="story-content">
+                        <h4>CloudScale Partners</h4>
+                        <p>"Zi-US's platform enabled us to offer cutting-edge deployment solutions to our enterprise clients with confidence and reliability."</p>
+                        <div class="story-stats">
+                            <span class="stat-item"><span class="stat-value">50+</span> enterprise clients</span>
+                            <span class="stat-item"><span class="stat-value">99.9%</span> uptime achieved</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-logo">WD</div>
+                    <div class="story-content">
+                        <h4>WebDev Masters</h4>
+                        <p>"The partner program provided us with the tools and knowledge to scale our operations and deliver exceptional value to our clients."</p>
+                        <div class="story-stats">
+                            <span class="stat-item"><span class="stat-value">200%</span> ROI in year one</span>
+                            <span class="stat-item"><span class="stat-value">25+</span> certified developers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application" id="apply">
+        <div class="container">
+            <div class="application-content">
+                <h2>Ready to become a partner?</h2>
+                <p>Tell us about your business and how we can grow together</p>
+                
+                <form class="application-form" action="#" method="POST">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last-name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Business Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label" for="company">Company Name *</label>
+                            <input type="text" id="company" name="company" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company-size">Company Size *</label>
+                            <select id="company-size" name="company-size" class="form-select" required>
+                                <option value="">Select size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">201-500 employees</option>
+                                <option value="500+">500+ employees</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="partner-type">Partnership Interest *</label>
+                            <select id="partner-type" name="partner-type" class="form-select" required>
+                                <option value="">Select type</option>
+                                <option value="agency">Agency Partner</option>
+                                <option value="technology">Technology Partner</option>
+                                <option value="consulting">Consulting Partner</option>
+                                <option value="reseller">Reseller</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label" for="message">Tell us about your business and goals *</label>
+                            <textarea id="message" name="message" class="form-textarea" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partner Resources</h2>
+                <p>Everything you need to succeed as a Zi-US partner</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h4>Partner Guide</h4>
+                    <p>Comprehensive onboarding and best practices guide</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎥</div>
+                    <h4>Training Videos</h4>
+                    <p>On-demand video tutorials and webinar recordings</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🏆</div>
+                    <h4>Certification</h4>
+                    <p>Earn badges and certificates to showcase expertise</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📊</div>
+                    <h4>Sales Tools</h4>
+                    <p>Presentations, demos, and sales enablement materials</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💻</div>
+                    <h4>API Access</h4>
+                    <p>Advanced API documentation and integration guides</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🛡️</div>
+                    <h4>Partner Portal</h4>
+                    <p>Exclusive portal for managing leads and commissions</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📢</div>
+                    <h4>Marketing Assets</h4>
+                    <p>Co-branded templates and marketing materials</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🤝</div>
+                    <h4>Community Forum</h4>
+                    <p>Connect with other partners and share insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h5>Product</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="index.html#enterprise">Enterprise</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Developers</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#docs">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Community</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="index.html#integration">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 Zi-US by Borel Sigma Inc. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com" class="social-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="social-link" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and submission
+        const applicationForm = document.querySelector('.application-form');
+        if (applicationForm) {
+            applicationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple form validation
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Visual feedback
+                const submitBtn = this.querySelector('.btn-primary');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    submitBtn.textContent = 'Application Submitted!';
+                    submitBtn.style.background = '#27c93f';
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = '';
+                        this.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.benefit-card, .tier-card, .story-card, .resource-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Resource cards click interaction
+        document.querySelectorAll('.resource-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Visual feedback
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
